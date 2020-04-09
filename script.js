@@ -18,22 +18,24 @@ hours.map((hour) => {
   hourRow.text(hour);
   $(".time-block").append(hourRow);
 
-  /* var timeNow = parseInt(moment().format("h"));
-  var hourNow = parseInt(hour);
-  //console.log(timeNow);
+
+  /* WHEN I view the timeblocks for that day
+THEN each timeblock is color coded to indicate whether it is in the past, present, or future*/ 
+
+  var timeNow = parseInt(moment().format("LT"));
+  console.log((moment().format("LT")));
 
 
   if (hour === timeNow) {
-      hourRow.attr("class", "hour past");
-  } */
+      hourRow.attr("class", "hour present");
+  } 
 
 });
 
-/* WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist */
+
+//WHEN I click into a timeblock
+//THEN I can enter an event
+//WHEN I click the save button for that timeblock
+//THEN the text for that event is saved in local storage
+//WHEN I refresh the page
+//THEN the saved events persist 
